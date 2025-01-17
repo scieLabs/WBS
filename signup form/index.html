@@ -8,19 +8,38 @@
         </header>
 
     </head>
-    <body>
+    <body style="background-color:rgb(185, 237, 241);">
         <section id="section1" class="section">
             <h2> Sign-Up Form</h2>
             <form>
                 <fieldset>
                     <legend>Personal Info</legend>
                     <label for="fname">First Name</label>
-                    <input id="fname" type="text" name="
-                    fname" placeholder="John"/>
+                        <input id="fname" type="text" name="
+                    fname" placeholder="Jumanji" required autocomplete/>
                     <label for="lname">Last Name</label>
-                    <input id="lname" type="text"/>
+                        <input id="lname" type="text" name="lname" placeholder="Costco" required autocomplete/>
+                    <br>
+                    <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="jumanji.c@cr.com" required autocomplete/>
+                    <label for="phone">Phone Number</label>
+                        <input id="phone" type="tel" name="phone" placeholder="+49"/>
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password" />
+                    <br>
+                    <label for="course-select"> Select Course</label>
+                    <select id="courses" name="courses">
+                        <option value="">--Choose an option--</option>
+                        <option value="js">JavaScript</option>
+                        <option value="ts">TypeScript</option>
+                        <option value="java">Java</option>
+                    </select>
+
 
                 </fieldset>
+            
+                <button type="button">Click to submit</button>
             </form>
         </section>
     </body>
