@@ -161,4 +161,5 @@ footer {
     text-wrap: wrap;
     background-color: rgb(31, 30, 32);
     color: #ffffff;
+    align-items: center;
 }
