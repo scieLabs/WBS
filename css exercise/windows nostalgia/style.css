@@ -1,0 +1,50 @@
+body {
+    margin-left: 1rem;
+}
+
+p, h4 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h4 {
+    color: white;
+}
+
+h4 {
+    margin-left: 1rem;
+}
+
+img {
+    margin-left: 1rem;
+}
+
+p {
+    margin-left: 2rem;
+    display: inline-block;
+}
+
+.window {
+    border-radius: 10px;
+    border-color: rgb(236, 238, 237);
+    border-style: outset;
+    background-color: lightgrey;
+    size: 500px 100px;
+}
+
+.border {
+    /*transparent gradient 
+    background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0))
+    */
+    background-image: linear-gradient(to right, blue, lightblue);
+    background-size: cover;
+    
+    
+}
+
+button {
+    border-style: outset;
+    border-color: rgb(197, 201, 204);
+    background-color: lightgrey;
+    margin-left: 24rem;
+    margin-bottom: 1rem;
+}
