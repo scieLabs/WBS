@@ -151,6 +151,10 @@ section h2 {
     height: 300px;
 }
 
+#services li {
+  max-width: 50ch;
+}
+
 footer {
     font-size: small;
     height: 100px;

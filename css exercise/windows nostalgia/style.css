@@ -8,6 +8,8 @@
 body {
     margin-left: 1rem;
     margin-top: 1rem;
+    margin-right: 1rem;
+    background-color: aqua;
 }
 
 p, h4 {
@@ -45,8 +47,6 @@ p {
     background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0))
     */
     background-image: linear-gradient(to right, blue, lightblue);
-    background-size: cover;
-
     
 }
 
@@ -57,7 +57,6 @@ button {
     margin-right: 1rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
-    position: relative;
     padding: 2px 10px;
     margin-left: 80%;
 }
