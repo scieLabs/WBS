@@ -11,8 +11,8 @@
         <!-- We'll add content here next -->
         <nav>
             <a href="#">Home</a>
-            <a href="#Gallery">Gallery</a>
-            <a href="#Services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#services">Services</a>
         </nav>
          <div class="flex-container" id="headerFlex">
             <div class="hero">
@@ -31,28 +31,40 @@
         <section class="section" id="gallery">
             <h2 class="heading">Gallery</h2>
             <div class="grid-container" id="images">
-                <div>
-                    <img src="https://picsum.photos/id/17/300/200" alt="path" />
-                </div>
-                <div>
-                    <img src="https://picsum.photos/id/16/300/200" alt="sea" />
-                </div>
-                <div>
-                    <img src="https://picsum.photos/id/36/300/200" alt="technology" />
-                </div>
-                <div>
-                    <img src="https://picsum.photos/id/61/300/200" alt="city" />
-                </div>
+                <figure id="figure1">
+                    <img src="./src/path.jpg" alt="path" />
+                </figure>
+                <figure id="figure2">
+                    <img src="./src/sea.jpg" alt="sea" />
+                </figure>
+                <figure id="figure3">
+                    <img src="./src/technology.jpg" alt="technology" />
+                </figure>
+                <figure id="figure4">
+                    <img src="./src/city.jpg" alt="city" />
+                </figure>
+                <figure id="figure5">
+                    <img src="./src/cars.jpg" alt="cars" />
+                </figure>
+                <figure id="figure6">
+                    <img src="./src/concert.jpg" alt="concert"/>
+                </figure>
+                <figure id="figure7">
+                    <img src="./src/controller.jpg" alt="controller"/>
+                </figure>
+                <figure id="figure8">
+                    <img src="./src/door.jpg" alt="door" />
+                </figure>
             </div>
         </section>
 
         <section class="section" id="services">
             <h2 class="heading">Services</h2>
             <div class="flex-container" id="servicesFlex">
-                <div>
-                    <img src="https://picsum.photos/id/137/100/100" alt="wormhole"/>
+                <div id="servicesItem1">
+                    <img src="./src/wormhole.jpg" alt="wormhole"/>
                 </div>
-                <div>
+                <div id="servicesItem2">
                     <ul>
                         <li>There and back again!</li>
                         <li>Right through the wormhole!</li>
@@ -68,14 +80,14 @@
     <footer>
         <!-- Footer content goes here -->
          <div class="flex-container" id="footerFlex">
-            <div>
+            <div class="text" id="footerItem1">
                 <p>
                     <strong>Disclaimer:</strong>
                     We accept no responsibility for any harm caused. You're on your own, buddy!
                 </p>
             </div>
-            <div>
-                <p>In need of rescue? Better hope Doctor Who finds you.</p>
+            <div class="text" id="footerItem2">
+                <p>In need of a rescue? Better hope Doctor Who finds you.</p>
             </div>
          </div>
     </footer>

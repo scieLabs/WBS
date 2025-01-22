@@ -11,6 +11,11 @@ body {
 header {
     text-align: center;
     letter-spacing: 0.7px;
+    margin-top: 2rem;
+}
+
+header div p {
+    text-align: center;
 }
 
 h1 {
@@ -44,7 +49,7 @@ main figcaption {
 
 }
 
-p {
+body p {
     margin-left: 0.7rem;
     max-width: 80ch;
 }
@@ -64,4 +69,23 @@ fieldset legend {
 
 fieldset input {
     margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    main img {
+        width: 90%;
+    }
+    main {
+        margin: 1rem 1.2rem;
+    }
+    form textarea {
+        width: 90%;
+        height: 5rem;
+    }
+
 }

@@ -46,7 +46,9 @@ h1 {
 }
 
 main {
-    margin: 2rem 4rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2rem;
 }
 
 main section {
@@ -74,4 +76,23 @@ section h3, section li {
 
 section li {
     margin-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: block;
+        padding: 1rem 1rem;
+        text-align: center;
+    }
+    header ul {
+        padding-top: 1rem;
+        text-align: center;
+    }
+    header a {
+        color: rgb(183, 165, 199);
+    }
+    header img {
+        width: 50%;
+        height: auto;
+    }
 }
