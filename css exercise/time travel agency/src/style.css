@@ -17,12 +17,7 @@
     /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
   }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
+
   
   /* 6. Inherit fonts for form controls */
   input, button, textarea, select {
@@ -45,27 +40,30 @@
   
   /*
     9. Create a root stacking context
-  */
+
   #root, #__next {
     isolation: isolate;
+      
   }
+    */
 
 /* ------- Here ends the reset ------------ */
 
-.flex-container {
+#headerFlex {
     display: flex;
     text-align: left;
     justify-content: center;
-    column-gap: 4rem;
+    column-gap: 2rem;
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
     margin-top: 2rem;
+    row-gap: 2rem;
 }
 
-.flex-container button {
+#headerFlex button {
     color: rgb(255, 255, 255);
-    background-color: blueviolet;
+    background-image: linear-gradient(blueviolet, rgb(85, 27, 75), blueviolet);
     padding: 10px 30px;
     text-transform: uppercase;
     border-radius: 25px;
@@ -77,11 +75,17 @@
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;;
 }
 
+#headerFlex button:hover {
+  background-image: linear-gradient(rgb(85, 27, 75), blueviolet 80%, rgb(85, 27, 75));
+}
+
 header {
-    height: 200px;
+    height: fit-content;
     letter-spacing: 1px;
     background-color: rgb(31, 30, 32);
+    background-image: linear-gradient(rgba(63, 25, 68, 0.5), rgba(0,0,0,0)), url(./galaxy.jpg);
     color: #ffffff;
+    padding-bottom: 30px;
 }
 
 nav {
@@ -95,7 +99,7 @@ nav a {
     color: rgb(122, 84, 158);
     padding-left: 10px;
     font-weight: 500;
-    text-shadow: 0.5px 0.5px 0.5px blueviolet;
+    text-shadow: 1px 1px 1px rgb(169, 30, 173);
 }
 
 header h1 {
@@ -108,6 +112,10 @@ nav a:hover {
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
+nav a:after {
+  color: white;
+}
+
 /* -------------- header end -----------------*/
 
 section h2 {
@@ -115,51 +123,117 @@ section h2 {
     color: rgb(122, 84, 158);
     text-transform: uppercase;
     text-shadow: 1px 1px 1px blueviolet;
-    margin-top: 2rem;
+}
+
+#gallery .heading {
+  padding-top: 2rem;
 }
 
 .grid-container {
     display: grid;
     column-gap: 1rem;
     row-gap: 1rem;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 1.5rem;
-    justify-content: center;
-    align-content: center;
-}
+    object-fit: cover;
 
+}
 
 .grid-container img {
-    object-fit: cover;
-    width: 300px;
-    height: 100%;
-    border-radius: 10%;
+  width: 100%;
+  border-radius: 10%;
+
 }
 
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(1, 1fr); /* One column for smaller screens */
-    }
-}
-
-#services img {
-    border-radius: 50%;
-    size-adjust: 100%;
-}
+/* --------- grid end --------- */
 
 #services {
-    height: 300px;
+    height: fit-content;
+    background-color: rgb(211, 180, 240);
+    margin-top: 2rem;
+}
+
+#services .heading {
+  background-image: linear-gradient(to right, rgb(85, 27, 75), 10%, blueviolet 80%, rgb(85, 27, 75));
+  text-shadow: 1px 1px 1px rgb(169, 30, 173);
+  color: white;
+  border-top: 2px;
+  border-top-style: ridge;
+  border-top-color: rgb(85, 27, 75);
+  border-bottom-style: ridge;
+  border-bottom-color: blueviolet;
 }
 
 #services li {
   max-width: 50ch;
 }
 
-footer {
-    font-size: small;
-    height: 100px;
-    text-wrap: wrap;
-    background-color: rgb(31, 30, 32);
-    color: #ffffff;
-    align-items: center;
+#servicesFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 3rem;
+
 }
+
+#servicesFlex img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+#servicesItem1 {
+  align-items: flex-end;
+}
+
+
+/* -----------services ------------*/
+
+#footerFlex {
+  display: flex;
+    font-size: small;
+    height: fit-content;
+    text-wrap: wrap;
+    background-image: linear-gradient(rgb(53, 51, 54), rgb(32, 31, 31), rgb(0, 0, 0));
+    color: #ffffff;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+#footerItem1 {
+  align-self: center;
+}
+
+#footerItem2 {
+  align-self: flex-end;
+  font-size: smaller;
+}
+
+footer p {
+  max-width: 50ch;
+}
+
+/* --------- media -------------- */
+
+@media (max-width: 600px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* One column for smaller screens */
+  }
+}
+
+@media (max-width: 360px) {
+  .grid-container {
+      grid-template-columns: repeat(1, 1fr); /* One column for smaller screens */
+  }
+}
+
