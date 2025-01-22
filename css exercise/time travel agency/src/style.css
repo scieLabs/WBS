@@ -145,6 +145,10 @@ section h2 {
 
 }
 
+#figure7, #figure8 {
+  grid-row: 1fr / 1fr;
+}
+
 /* --------- grid end --------- */
 
 #services {
@@ -164,16 +168,12 @@ section h2 {
   border-bottom-color: blueviolet;
 }
 
-#services li {
-  max-width: 50ch;
-}
-
 #servicesFlex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 5rem;
+  margin-left: 2rem;
   margin-right: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -185,11 +185,6 @@ section h2 {
   border-radius: 50%;
   width: 100px;
 }
-
-#servicesItem1 {
-  align-items: flex-end;
-}
-
 
 /* -----------services ------------*/
 
@@ -229,11 +224,17 @@ footer p {
   .grid-container {
       grid-template-columns: repeat(2, 1fr); /* One column for smaller screens */
   }
+  #servicesFlex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 360px) {
   .grid-container {
       grid-template-columns: repeat(1, 1fr); /* One column for smaller screens */
   }
+
 }
 
